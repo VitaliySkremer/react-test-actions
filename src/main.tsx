@@ -10,10 +10,14 @@ import App from "./App";
 import { TodoPage } from "./pages/TodoPage/TodoPage";
 import "./style/index.css";
 
+const basename = import.meta.env.BASE_URL.endsWith("/")
+  ? import.meta.env.BASE_URL.slice(0, -1)
+  : import.meta.env.BASE_URL;
+
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <PrimeReactProvider>
-      <BrowserRouter>
+      <BrowserRouter basename={basename}>
         <div className="container">
           <Routes>
             <Route path="/">
