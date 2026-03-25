@@ -13,8 +13,8 @@ import "./style/index.css";
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <PrimeReactProvider>
-      <BrowserRouter>
-        <div className="container">
+      <BrowserRouter basename="/react-test-actions">
+        <div className="container">.
           <Routes>
             <Route path="/">
               <Route
